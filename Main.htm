@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Logo chill n chat-modified.png">
+    <title>Chill n' Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6f61;
+        }
+
+        .navbar .links a {
+            margin-left: 20px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .navbar .links a:hover {
+            color: #ff6f61;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1c1c1c, #282828);
+        }
+
+        .hero-logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 111, 97, 0.8), 0 0 40px rgba(255, 111, 97, 0.6);
+            animation: glow 2s infinite alternate;
+        }
+
+        /* Glow Animation */
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px rgba(255, 111, 97, 0.8), 0 0 40px rgba(255, 111, 97, 0.6);
+            }
+            to {
+                box-shadow: 0 0 30px rgba(255, 111, 97, 1), 0 0 60px rgba(255, 111, 97, 0.8);
+            }
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #cfcfcf;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .hero .btn:hover {
+            background: #ff3b2f;
+        }
+
+
+@keyframes keyframes-svg-filled {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes keyframes-svg-celebrate {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}
+
+        /* About Section */
+        .about {
+            padding: 60px 0;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #cfcfcf;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+            background: #181818;
+            color: #cfcfcf;
+        }
+
+        .footer a {
+            color: #ff6f61;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                Chill n' Chat
+            </div>
+            <div class="links">
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="https://discord.gg/n4DCCBjet5">Join</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="Logo chill n chat.png" alt="Chill n' Chat Logo" class="hero-logo">
+        <h1>Welcome to Chill n' Chat</h1>
+        <p>The coolest place to hang out, connect, and share amazing vibes with awesome people.</p>
+        <a href="https://discord.gg/n4DCCBjet5" target="_blank" class="btn">Join Our Discord</a>
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Chill n' Chat is a vibrant community for Programmers, Gamers, and casual chatters. We host events, funny and amazing conversations, and create a space where everyone feels at home.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Chill n' Chat | <a href="https://discord.gg/n4DCCBjet5" target="_blank">Join Discord</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Retrieve the like count from local storage, if available
+        let likeCount = localStorage.getItem('likeCount') ? parseInt(localStorage.getItem('likeCount')) : 0;
+
+        // Display the current like count
+        const likeCountDisplay = document.getElementById('likeCount');
+        likeCountDisplay.textContent = likeCount;
+
+        // Like Button Functionality
+        const likeButton = document.getElementById('likeButton');
+
+        // Event listener for the like button
+        likeButton.addEventListener('click', function() {
+            likeCount++;
+            localStorage.setItem('likeCount', likeCount);  // Store the updated count in local storage
+            likeCountDisplay.textContent = likeCount;  // Update the displayed count
+        });
+    </script>
+</body>
+</html>
